@@ -1,9 +1,6 @@
 package com.example.aireacondicionado;
-
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +10,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -111,17 +107,12 @@ public class automatico extends Fragment {
                 String inicio=editTextInicio.getText().toString();
                 String fin=editTextFinal.getText().toString();
                 String temperatura=editTextTemperatura.getText().toString();
-
                 myRef.child("HoraInicial").setValue(inicio);
                 myRef.child("HoraFinal").setValue(fin);
                 myRef.child("TemperaturaControl").setValue(temperatura);
-
                 String repeticion=spRepetecion.getSelectedItem().toString();
                 txtrepeticion.setText(repeticion);
-
                 myRef.child("Repeticion").setValue(repeticion);
-
-
                 Toast.makeText(getContext(), "Enviado con exito", Toast.LENGTH_SHORT).show();
 
 

@@ -1,9 +1,7 @@
 package com.example.aireacondicionado;
-
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -11,7 +9,6 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
@@ -35,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+        // Pasando cada ID de menú como un conjunto de ID porque cada
+        // el menú debe considerarse como destinos de nivel superior.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_registro, R.id.nav_control,R.id.blankFragment,R.id.fragment_Temperatura_Control)
                 .setDrawerLayout(drawer)
@@ -48,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        // Inflar el menú; esto agrega elementos a la barra de acción si está presente.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
